@@ -1,0 +1,12 @@
+@import url('config.css');
+
+/* Header */
+
+header {
+    background-color: #333333;
+}
+
+header>img {
+    height: 8vh;
+    padding: 8px 35px;
+}
