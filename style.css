@@ -1,12 +1,104 @@
 @import url('config.css');
 
+.container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas: "header"
+                        "main"
+                        "descricao"
+                        "carros"
+                        "planos"
+                        "quemSomos"
+                        "contato"
+                        "footer";
+    height: 100vh;
+    width: 100vw;
+}
+
+.grid {
+    border: 2px solid green;
+}
+
+span {
+    color: #FF5C5C
+}
+
 /* Header */
 
 header {
     background-color: #333333;
+    grid-area: header;
 }
 
 header>img {
     height: 8vh;
     padding: 8px 35px;
+}
+
+/* Main */
+
+main {
+    grid-area: main;
+}
+
+/* Descrição */
+
+.descricao {
+    background-color: #E7E7E7;
+    grid-area: descricao;
+}
+
+/* Carros */
+
+.carros {
+    background-color: white;
+    grid-area: carros;
+}
+
+.carros p {
+    color: #FF5C5C;
+}
+
+/* Planos */
+
+.planos {
+    background-color: #E7E7E7;
+    grid-area: planos;
+}
+
+.planos h1 {
+    color: white;
+}
+
+.planos h5 {
+    color: #FF5C5C;
+}
+
+/* Quem Somos */
+
+.quemSomos {
+    grid-area: quemSomos;
+}
+
+.quemSomos h1 {
+    color: #FF5C5C;
+}
+
+/* Contato */
+
+.contato {
+    background-color: #E7E7E7;
+    grid-area: contato;
+}
+
+.contato h1 {
+    color: #FF5C5C;
+}
+
+/* Footer */
+
+footer {
+    background-color: #333333;
+    grid-area: footer;
 }
