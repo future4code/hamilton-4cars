@@ -212,4 +212,25 @@ main>div>img {
 footer {
     background-color: #333333;
     grid-area: footer;
+  
+    
+    
+}
+
+.social > ul {
+    height: 10vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.social > ul > li {
+    height: 24px;
+    align-self: center;
+    margin: 3vw;
+}
+
+.social > ul > li > a > img {
+    width: 24px;
+    height: 24px;
 }
