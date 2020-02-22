@@ -15,11 +15,11 @@
 
         <!-- Main -->
         <main class="grid">
-            <div>
+            <div class="grid-main imagem-main">
                 <img src="./img/1b.JPG" alt="carro">
             </div>
 
-            <div id="textoMain">
+            <div id="grid-main texto-main">
                 <h2>A qualquer <span>hora</span>.</h2>
                 <h2>Em qualquer <span>lugar</span>.</h2>
                 <button>Planos</button>
@@ -46,46 +46,40 @@
 
         <!-- Planos -->
         <section class="grid planos">
-            <h1><span>Economize</span> com<br> nossos planos</h1>
+            <div class="grid-planos chamada-planos">
+                <h1><span>Economize</span> com<br> nossos planos</h1>
+                <button id="btnContratar">Contratar</button>
+            </div>
 
-            <div id="plano1">
-                <h1 id="branco">Flex</h1>
+            <div class="grid-planos plano1-planos">
+                <h1 class="branco">Flex</h1>
                 <h5>2000km/semana</h5>
-                <p id="branco">R$195,00</p>
+                <p class="branco">R$195,00</p>
             </div>
 
-            <div id="plano2">
-                <h1 id="branco">Livre</h1>
+            <div class="grid-planos plano2-planos">
+                <h1 class="branco">Livre</h1>
                 <h5>Kms livres</h5>
-                <p id="branco">R$380,00</p>
+                <p class="branco">R$380,00</p>
             </div>
 
-            <button id="btnContratar">Contratar</button>
         </section>
 
         <!-- Quem somos -->
         <section class="grid quemSomos">
             <h1>Quem somos:</h1>
-            <p>A 4CARS é uma startup que chegou para revolucionar o mercado de aluguel de carros com serviços de qualidade e preço justo.</p>
+            <p>A <b>4CARS</b> é uma startup que chegou para revolucionar o mercado de aluguel de carros com serviços de qualidade e preço justo.</p>
         </section>
 
         <!-- Contato -->
         <section class="grid contato">
             <h1>Fale com a gente:</h1>
             <form>
-                <label for="nome">Nome: </label>
-                <input type="text" id="nome">
-
-                <label for="email">Email: </label>
-                <input type="email" id="email">
-
-                <label for="telefone">Telefone: </label>
-                <input type="tel" id="telefone">
-
-                <label for="mensagem">Mensagem: </label>
-                <input type="text" id="mensagem">
-
-                <input type="submit" value="Enviar">
+                <input type="text" id="nome" placeholder="Nome">
+                <input type="email" id="email" placeholder="Email">
+                <input type="tel" id="telefone" placeholder="Telefone (xx) xxxx-xxxx">
+                <textarea type="text" id="mensagem" placeholder="Mensagem"></textarea>
+                <button type="submit" value="Enviar">Enviar</button>
             </form>
         </section>
 
