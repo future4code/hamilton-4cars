@@ -1,0 +1,333 @@
+@import url('config.css');
+
+
+.container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas: "header"
+                            "main"
+                                "descricao"
+                                     "carros"
+                                "planos"
+                        "quemSomos"
+                    "contato"
+                "footer";
+    height: 100vh;
+    width: 100vw;
+}
+
+.grid {
+    /* border: 2px solid green; */
+}
+
+
+/* ======== HEADER ========= */
+header {
+    background-color: #333333;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    height: 9vw;  
+}
+
+header>img {
+    height: 8vh;
+    padding: 8px 35px;
+}
+
+/* ======== MAIN ======== */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 10vw 90vw;
+    grid-template-rows: 1fr;
+    justify-items: flex-start;
+    align-items: center;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.imagem-main {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    z-index: -1;
+}
+
+.imagem-main > img {
+    width: 100vw;
+}
+
+.texto-main {
+    grid-column: 1/2;
+    grid-row: 1/1;
+}
+
+.texto-main h2 {
+    background-color: white;
+    
+}
+
+
+/* ========= DESCRIÇÃO ========== */
+.descricao {
+    background-color: #E7E7E7;
+    grid-area: descricao;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descricao p {
+    padding: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4vw;
+    width: 40vw;
+}
+
+/* ====== CARROS ======= */
+.carros {
+    background-color: white;
+    grid-area: carros; 
+    padding: 0 0 3vh 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+.carros > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carros > div > img {
+    width: 40vw;
+    height: auto;
+}
+
+.carros p {
+    color: #FF5C5C;
+    background-color: #333333;
+    padding: 20px 50px;
+    font-weight: bold;
+    font-size: 4vh;
+    width: 25vw;
+    height: 2vh ;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*====== PLANOS ======= */
+.planos { /*esse é um bloco <section> do container principal*/
+    background-color: #E7E7E7;
+    grid-area: planos; 
+        /*aqui começa o SUBGRID de .planos <section>*/
+    display: grid;
+    grid-template-columns: 30vw 25vw 25vw;
+    grid-template-rows: 1fr;
+    grid-template-areas: "chamada plano1 plano2"; /* aqui indica ques os itens estarão TODOS na mesma coluna*/
+    padding: 2%;
+    gap: 2%;
+        /*alinhamento dos filhos diretos em relação a esse SUBGRID*/
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+    /*.planos | coluna1*/
+.grid-planos { /*esse bloco alinha todos os ítens dentro das DIVs(filhos diretos)*/
+    height: 20vh;
+    display: grid;
+    align-content: center;
+    align-content: center;
+}
+                /**/
+.chamada-planos { 
+    grid-area: chamada; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 4vh;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.chamada-planos > h1 {
+}
+
+.branco {
+    color: white;
+}
+
+.planos h5 {
+    color: #FF5C5C;
+}
+
+#btnContratar {  
+    background-color: #FF5C5C;
+    color: white;
+    font-weight: bold;
+    font-size: 3vh;
+    border: 1px;
+    border-radius: 5px;
+    width: 12vw;
+    height: 8vh;
+    margin-top: 3vh;
+}
+
+#btnContratar:hover {
+    background-color: #333333;
+    cursor: pointer;
+}
+
+    /* .planos | coluna2*/
+.plano1-planos{
+    grid-area: plano1;
+    background-color: #333333;
+    border: 1px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.plano1-planos > p {
+    font-size: 3vh;
+}
+
+.plano1-planos > h5 {
+    font-size: 3vh;
+}
+
+     /* .planos | coluna3*/
+.plano2-planos {
+    grid-area: plano2;
+    background-color: #333333;
+    border: 1px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center
+}
+
+.plano2-planos > p {
+    font-size: 3vh;
+}
+
+.plano2-planos > h5 {
+    font-size: 3vh;
+}
+
+/* ======= QUEM SOMOS ======== */
+
+.quemSomos {
+    grid-area: quemSomos;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh;
+}
+
+.quemSomos h1 {
+    color: #FF5C5C;
+    width: 90vw;
+    text-align: center;
+    font-size: 2.5vw;
+    margin-bottom: 2vh;
+}
+
+.quemSomos > p {
+    width: 50vw;
+    font-size: 2.5vw;
+    text-align: justify;   
+}
+
+/* ======= CONTATO ======== */
+
+.contato {
+    background-color: #E7E7E7;
+    grid-area: contato;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.contato h1 {
+    color: #FF5C5C;
+    width: 60vw;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+.contato form {
+    width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+    margin-top: 3vh;
+    justify-content: center;
+
+}
+
+.contato input, textarea, button {
+    background: #333333;
+    color: white;
+    margin: 0.5vh;
+    height: 5vh;
+    padding: 0 0 0 1vw;
+    width: 40vw;
+
+}
+.contato textarea {
+    height: 20vh;
+    padding-top: 2vh;
+}
+.contato button {
+    width: 10vw;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+}
+
+/* ====== FOOTER ======== */
+
+footer {
+    background-color: #333333;
+    grid-area: footer;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.social > ul {
+    height: 10vh;
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+}
+
+.social > ul > li {
+    height: 24px;
+    align-self: center;
+    margin: 3vw;
+}
+
+.social > ul > li > a > img {
+    width: 24px;
+    height: 24px;
+}
